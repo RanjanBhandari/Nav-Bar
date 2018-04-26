@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon');
+body{
+  font-family: 'Do Hyeon', sans-serif;
+  background-color: #f1f3ce;
+  overflow-x: hidden;
+  margin: 0;
+  top: 0;
+  padding: 0;
+}
+.navbar{
+  background-color: #00293c;
+  height:70px;
+  text-transform: uppercase;
+  padding-right: 70px;
+}
+.navbar a{
+  float:left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar > ul{
+  padding: 8px 0 0 0;
+}
+.navbar ul{
+    margin:0;
+    list-style-type: none;
+}
+.navbar a:hover{
+  background-color: #f5be41;
+  color: black;
+
+}
+.side-nav {
+  height: 100%;
+  width: 0;
+  position:fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  background-color: #2f3131;
+  opacity: 0.9;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.side-nav a{
+  padding: 5px 5px 5px 20px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #f8f1e5;
+  display: block;
+  text-align:left;
+  transition: 0.3s;
+
+}
+.side-nav a:hover{
+  color: #f5be41;
+}
+.side-nav .btn-close{
+  position: absolute;
+  top:0;
+  right:22px;
+  font-size: 70px;
+}
+.side-nav ul{
+  list-style-type: none;
+}
+.main{
+  transition: margin-Left 0.5s;
+  padding: 25px;
+  overflow: hidden;
+  width:auto;
+}
+
+
+/* Media queries*/
+
+@media (max-width:412px) {
+  .navbar-nav{display:none;}
+  .main .p{ width:100%}
+
+
+}
+@media (min-width:412px) {
+  /*.open-slide{display:none;}*/
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .navbar-nav li{
+    position: relative;
+    width: auto;
+  }
+  .navbar-nav li .navbar-inner{
+    display: none;
+  }
+.navbar-nav li:hover .navbar-inner{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  height: auto;
+  width: auto;
+  background-color : #00293c;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
